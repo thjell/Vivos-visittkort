@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Vivos Byggkonsult AS | Byggesøknad, deling og seksjonering</title>
 
-  <meta name="description"
-        content="Vivos Byggkonsult AS bistår med byggesøknad, deling av eiendom og matrikkelenhet, seksjonering, prosjektering og tegning.">
+  <meta
+    name="description"
+    content="Vivos Byggkonsult AS bistår med byggesøknad, byggesak, deling av eiendom og matrikkelenhet, seksjonering, prosjektering og tegning."
+  >
 
   <style>
+
+    /* =========================
+       GRUNNOPPSETT
+       ========================= */
+
     * {
       box-sizing: border-box;
     }
@@ -18,153 +26,202 @@
       margin: 0;
       min-height: 100vh;
       padding: 28px 16px;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       background: #f3f5f6;
+
       font-family: Arial, Helvetica, sans-serif;
       color: #414b59;
     }
 
+
+    /* =========================
+       VISITTKORT
+       ========================= */
+
     .card {
       width: 100%;
       max-width: 460px;
+
       background-color: #ffffff;
+
       background-image:
-         linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
-         url("background.png");
+        linear-gradient(
+          rgba(255, 255, 255, 0.78),
+          rgba(255, 255, 255, 0.78)
+        ),
+        url("background.png");
+
       background-size: cover;
-      background-position: center;
+      background-position: 58% center;
       background-repeat: no-repeat;
+
       border-radius: 26px;
-      padding: 38px 34px 28px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+
+      padding: 38px 34px 26px;
+
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+
       text-align: center;
     }
 
-    /* LOGO */
+
+    /* =========================
+       LOGO
+       ========================= */
 
     .logo {
       display: block;
+
       width: 100%;
       max-width: 320px;
       height: auto;
-      margin: 0 auto 28px;
+
+      margin: 0 auto 26px;
     }
 
-    /* SLAGORD */
+
+    /* =========================
+       SLAGORD
+       ========================= */
 
     .tagline {
-      margin: 0 auto 30px;
+      margin: 0 auto 27px;
+
       font-size: 18px;
       line-height: 1.55;
+
       color: #3f4855;
     }
 
-    /* TJENESTER */
+
+    /* =========================
+       TJENESTER
+       ========================= */
 
     .services {
-      margin: 0 auto 32px;
-      padding: 4px 0;
+      margin: 0 auto 28px;
+      padding: 0;
     }
 
     .services img {
       display: block;
+
       width: 100%;
-      max-width: 360px;
+      max-width: 350px;
       height: auto;
+
       margin: 0 auto;
     }
 
-    /* KNAPPER */
+
+    /* =========================
+       KNAPPER
+       ========================= */
 
     .actions {
       display: grid;
-      gap: 11px;
+      gap: 10px;
     }
 
     .button {
       display: flex;
       align-items: center;
       justify-content: center;
+
       gap: 9px;
-      min-height: 54px;
-      padding: 14px 18px;
-      border-radius: 12px;
+
+      min-height: 52px;
+      padding: 13px 18px;
+
+      border-radius: 11px;
+
       text-decoration: none;
+
       font-size: 16px;
       font-weight: 700;
-      transition: transform 0.15s ease, opacity 0.15s ease;
+
+      color: #414b59;
+
+      transition:
+        transform 0.15s ease,
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    .button-primary {
+      background: #f1f3f4;
+      border: 1px solid #d9dee1;
+    }
+
+    .button-secondary {
+      background: #f7f8f8;
+      border: 1px solid #e3e7e9;
     }
 
     .button:hover {
       transform: translateY(-1px);
+      background: #ffffff;
+      border-color: #cbd2d6;
     }
 
-    .button-primary {
-  background: #f1f3f4;
-  color: #4b5359;
-  border: 1px solid #d9dee1;
+    .button:focus-visible {
+      outline: 3px solid rgba(7, 136, 189, 0.25);
+      outline-offset: 2px;
     }
 
-    .button-secondary {
-  background: #f7f8f8;
-  color: #4b5359;
-  border: 1px solid #e5e8ea;
-    }
+    /* Bare symbolene bruker Vivos-blå */
 
     .icon {
+      color: #0788bd;
       font-size: 18px;
       line-height: 1;
     }
-    .button .icon {
-    color: #0788bd;
-    }
 
-    /* KONTAKTINFO */
 
-    .contact {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      padding: 20px 0;
-      border-top: 1px solid #dce3e7;
-      border-bottom: 1px solid #dce3e7;
-    }
-
-    .contact-item {
-      flex: 1;
-      padding: 0 12px;
-    }
-
-    .contact-item + .contact-item {
-      border-left: 1px solid #dce3e7;
-    }
-
-    .contact a {
-      color: #414b59;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .contact-symbol {
-  color: #0788bd;
-  margin-right: 6px;
-    }
-
-    /* FIRMAINFORMASJON */
+    /* =========================
+       FIRMAINFORMASJON
+       ========================= */
 
     .company {
-      margin-top: 22px;
-      font-size: 12px;
-      color: #7b858d;
-      line-height: 1.5;
+      margin-top: 24px;
+      padding-top: 17px;
+
+      border-top: 1px solid #dce3e7;
+
+      font-size: 11px;
+      line-height: 1.6;
+
+      color: #707980;
+
+      white-space: nowrap;
     }
 
-    /* MOBIL */
+    .company a {
+      color: #707980;
+      text-decoration: none;
+    }
+
+    .company a:hover {
+      color: #0788bd;
+    }
+
+    .company .divider {
+      margin: 0 5px;
+      color: #b8bec2;
+    }
+
+
+    /* =========================
+       MOBIL
+       ========================= */
 
     @media (max-width: 520px) {
+
       body {
         padding: 0;
         align-items: flex-start;
@@ -174,44 +231,63 @@
       .card {
         max-width: none;
         min-height: 100vh;
+
         border-radius: 0;
         box-shadow: none;
-        padding: 30px 24px 24px;
+
+        padding: 28px 24px 22px;
+
+        background-position: 60% center;
       }
 
       .logo {
-        max-width: 300px;
-        margin-bottom: 25px;
+        max-width: 295px;
+        margin-bottom: 23px;
       }
 
       .tagline {
+        margin-bottom: 24px;
+
         font-size: 17px;
-        margin-bottom: 26px;
+        line-height: 1.5;
       }
 
       .services {
-        margin-bottom: 28px;
+        margin-bottom: 25px;
+      }
+
+      .services img {
+        max-width: 340px;
+      }
+
+      .company {
+        white-space: normal;
+        line-height: 1.8;
       }
     }
 
+
+    /* =========================
+       SMÅ MOBILSKJERMER
+       ========================= */
+
     @media (max-width: 370px) {
+
       .card {
         padding-left: 18px;
         padding-right: 18px;
       }
 
-      .contact {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .contact-item + .contact-item {
-        border-left: 0;
+      .company .divider {
+        margin: 0 3px;
       }
     }
+
   </style>
 
-  <!-- Strukturert informasjon for søkemotorer -->
+
+  <!-- Strukturert informasjon for søkemotorer og maskinlesing -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -233,77 +309,106 @@
     ]
   }
   </script>
+
 </head>
+
 
 <body>
 
   <main class="card">
 
+    <!-- LOGO -->
+
     <img
       src="logo-vivos.jpg"
       alt="Vivos Byggkonsult AS"
-      class="logo">
+      class="logo"
+    >
+
+
+    <!-- SLAGORD -->
 
     <p class="tagline">
       Vi tar oss av søkerjobben<br>
       – så kan du bruke tiden på andre ting.
     </p>
 
-    <section class="services"
-             aria-label="Våre tjenester">
+
+    <!-- TJENESTER -->
+
+    <section
+      class="services"
+      aria-label="Våre tjenester"
+    >
 
       <img
         src="symboler.png"
-        alt="Byggesøknad, deling og matrikkelenhet, seksjonering, prosjektering og tegning">
+        alt="Vivos Byggkonsult tilbyr byggesøknad, deling og matrikkelenhet, seksjonering, prosjektering og tegning"
+      >
 
     </section>
 
+
+    <!-- HANDLINGER -->
+
     <div class="actions">
 
-      <a class="button button-primary"
-         href="mailto:post@vivos.no">
-        <span class="icon">✉</span>
-        Send e-post
+      <a
+        class="button button-primary"
+        href="mailto:post@vivos.no"
+      >
+        <span class="icon" aria-hidden="true">✉</span>
+        <span>Send e-post</span>
       </a>
 
-      <a class="button button-secondary"
-         href="tel:+4792409094">
-        <span class="icon">☎</span>
-        Ring oss
+
+      <a
+        class="button button-secondary"
+        href="tel:+4792409094"
+      >
+        <span class="icon" aria-hidden="true">☎</span>
+        <span>Ring oss</span>
       </a>
 
-      <a class="button button-secondary"
-         href="vivos.vcf"
-         download>
-        <span class="icon">＋</span>
-        Lagre kontakt
+
+      <a
+        class="button button-secondary"
+        href="vivos.vcf"
+        download
+      >
+        <span class="icon" aria-hidden="true">＋</span>
+        <span>Lagre kontakt</span>
       </a>
 
     </div>
 
-    <div class="contact">
 
-      <div class="contact-item">
-        <span class="contact-symbol">✉</span>
-        <a href="mailto:post@vivos.no">
-          post@vivos.no
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <span class="contact-symbol">☎</span>
-        <a href="tel:+4792409094">
-          924 09 094
-        </a>
-      </div>
-
-    </div>
+    <!-- FIRMAINFORMASJON -->
 
     <footer class="company">
-      Vivos Byggkonsult AS &nbsp;|&nbsp; Org.nr. 919 543 825
+
+      <span>Vivos Byggkonsult AS</span>
+
+      <span class="divider">|</span>
+
+      <a href="mailto:post@vivos.no">
+        post@vivos.no
+      </a>
+
+      <span class="divider">|</span>
+
+      <span>Org.nr. 919 543 825</span>
+
+      <span class="divider">|</span>
+
+      <a href="tel:+4792409094">
+        924 09 094
+      </a>
+
     </footer>
 
   </main>
 
 </body>
+
 </html>
