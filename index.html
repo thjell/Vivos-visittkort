@@ -3,36 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivos Byggkonsult</title>
+
+  <title>Vivos Byggkonsult AS | Byggesak, deling og seksjonering</title>
+
+  <meta name="description"
+        content="Vivos Byggkonsult AS bistår med byggesak, byggesøknad, deling av eiendom og seksjonering. Kontakt oss på post@vivos.no eller 924 09 094.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f5f6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #555;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      border-radius: 22px;
+      padding: 42px 32px 34px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 330px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+      margin: 0 auto 28px;
+      max-width: 330px;
+    }
+
+    .services {
+      color: #0788bd;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1.4px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button {
+      display: block;
+      padding: 15px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .primary {
+      background: #0788bd;
+      color: white;
+    }
+
+    .secondary {
+      background: #eef7fa;
+      color: #0788bd;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
+    }
+
+    .contact {
+      margin-top: 28px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #777;
+    }
+
+    .contact a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .company {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 14px;
+        background: white;
+      }
+
+      .card {
+        box-shadow: none;
+        padding: 30px 18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vivos Byggkonsult AS",
+    "description": "Rådgivning og bistand med byggesak, byggesøknad, deling av eiendom og seksjonering.",
+    "email": "post@vivos.no",
+    "telephone": "+4792409094",
+    "areaServed": "Norge",
+    "knowsAbout": [
+      "Byggesak",
+      "Byggesøknad",
+      "Ansvarlig søker",
+      "Deling av eiendom",
+      "Seksjonering"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <header>
-    <h1>VIVOS</h1>
-    <p>BYGGKONSULT</p>
-  </header>
+  <main class="card">
 
-  <main>
-    <h2>Byggesak • Plan • Eiendomsutvikling</h2>
+    <img src="logo-vivos.jpg"
+         alt="Vivos Byggkonsult AS"
+         class="logo">
 
-    <p>
-      Rådgivning innen byggesak, plan- og bygningsrett
-      og utvikling av eiendom.
+    <p class="tagline">
+      Vi tar oss av søkerjobben –<br>
+      så kan du bruke tiden på andre ting.
     </p>
 
-    <h3>Tjenester</h3>
+    <div class="services">
+      BYGGESAK · DELING · SEKSJONERING
+    </div>
 
-    <p>
-      Byggesak • Mulighetsvurderinger • Plan og eiendom •
-      Myndighetsdialog • Rådgivning
-    </p>
+    <div class="buttons">
 
-    <h3>Kontakt</h3>
+      <a class="button primary"
+         href="mailto:post@vivos.no">
+        ✉ Send e-post
+      </a>
 
-    <p>
-      Vivos Byggkonsult
-    </p>
+      <a class="button secondary"
+         href="tel:+4792409094">
+        ☎ Ring oss
+      </a>
+
+      <a class="button secondary"
+         href="vivos.vcf"
+         download>
+        ＋ Lagre kontakt
+      </a>
+
+    </div>
+
+    <div class="contact">
+      <a href="mailto:post@vivos.no">post@vivos.no</a><br>
+      <a href="tel:+4792409094">924 09 094</a>
+    </div>
+
+    <div class="company">
+      Vivos Byggkonsult AS
+    </div>
 
   </main>
 
