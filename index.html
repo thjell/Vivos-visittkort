@@ -104,7 +104,7 @@
        ========================= */
 
     .services {
-      margin: 0 auto 28px;
+      margin: 0 auto;
       padding: 0;
     }
 
@@ -120,12 +120,31 @@
 
 
     /* =========================
+       KONTAKTTEKST
+       ========================= */
+
+    .cta-text {
+      margin: 24px auto;
+
+      font-size: 16px;
+      line-height: 1.5;
+
+      color: #414b59;
+    }
+
+
+    /* =========================
        KNAPPER
        ========================= */
 
     .actions {
       display: grid;
       gap: 10px;
+
+      width: 100%;
+      max-width: 320px;
+
+      margin: 0 auto;
     }
 
     .button {
@@ -174,7 +193,7 @@
       outline-offset: 2px;
     }
 
-    /* Bare symbolene bruker Vivos-blå */
+    /* Symbolene i knappene bruker Vivos-blå */
 
     .icon {
       color: #0788bd;
@@ -189,29 +208,18 @@
 
     .company {
       margin-top: 24px;
-      padding-top: 17px;
+      padding-top: 14px;
 
       border-top: 1px solid #dce3e7;
 
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.6;
 
       color: #707980;
-
-      white-space: nowrap;
-    }
-
-    .company a {
-      color: #707980;
-      text-decoration: none;
-    }
-
-    .company a:hover {
-      color: #0788bd;
     }
 
     .company .divider {
-      margin: 0 5px;
+      margin: 0 6px;
       color: #b8bec2;
     }
 
@@ -252,17 +260,19 @@
         line-height: 1.5;
       }
 
-      .services {
-        margin-bottom: 25px;
-      }
-
       .services img {
         max-width: 340px;
       }
 
-      .company {
-        white-space: normal;
-        line-height: 1.8;
+      .cta-text {
+        margin: 24px auto;
+        font-size: 16px;
+      }
+
+      /* Samme bredde som logo på mobil */
+
+      .actions {
+        max-width: 295px;
       }
     }
 
@@ -276,6 +286,11 @@
       .card {
         padding-left: 18px;
         padding-right: 18px;
+      }
+
+      .logo,
+      .actions {
+        max-width: 100%;
       }
 
       .company .divider {
@@ -348,9 +363,13 @@
 
     </section>
 
-      <p class="tagline">
+
+    <!-- KONTAKTTEKST -->
+
+    <p class="cta-text">
       Ta kontakt for et hyggelig uforpliktende tilbud!
     </p>
+
 
     <!-- HANDLINGER -->
 
@@ -388,17 +407,11 @@
 
     <!-- FIRMAINFORMASJON -->
 
-   <footer class="company">
-
-  <div class="company-details">
-    <span>Vivos Byggkonsult AS</span>
-    <span class="divider">|</span>
-    <span>Orgnr: 919 543 825</span>
-    <span class="divider">|</span>
-    <span>Tlf: <a href="tel:+4792409094">92 40 90 94</a></span>
-  </div>
-
-</footer>
+    <footer class="company">
+      <span>Vivos Byggkonsult AS</span>
+      <span class="divider">|</span>
+      <span>Org.nr. 919 543 825</span>
+    </footer>
 
   </main>
 
